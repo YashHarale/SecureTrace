@@ -1,15 +1,22 @@
 <?php
-	function openConnection(){
-		$host="localhost";
-		$user="root";
-		$pw="root";
-		$db="supplychain";
+function openConnection() {
+    $host = "localhost";
+    $user = "root";
+    $pw = "your_password"; // Replace 'your_password' with your actual database password
+    $db = "supplychain";
 
-		$con = new mysqli($host, $user, $pw,$db) or die("Connect failed: %s\n". $conn -> error);
-		return $con; 
-	}
+    // Create connection
+    $con = new mysqli($host, $user, $pw, $db);
 
-	function closeConnection($con){
-		$con -> close();
-	}
+    // Check connection
+    if ($con->connect_error) {
+        die("Connection failed: " . $con->connect_error);
+    }
+
+    return $con;
+}
+
+function closeConnection($con) {
+    $con->close();
+}
 ?>
