@@ -22,7 +22,3 @@
 22) Execute the queries.
 23) Open URL http://localhost:8888/SupplyChainDAPP_FULL or http://localhost/SupplyChainDAPP_FULL (This URL may change depending on the software you installed, your OS, and project name)
 24) It should be running as expected
-
-For any queries, feel free to reach out.
-Linkedin: https://www.linkedin.com/in/iamanubhavdutta/
-Instagram: https://www.instagram.com/iamanubhavdutta/
