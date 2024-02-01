@@ -7,10 +7,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <link rel="SHORTCUT ICON" href="images/fibble.png" type="image/x-icon" />
-    <link rel="ICON" href="images/fibble.png" type="image/ico" />
+    <link rel="SHORTCUT ICON" href="images/SupplyTrack.png" type="image/x-icon" />
+    <link rel="ICON" href="images/SupplyTrack.png" type="image/ico" />
 
-    <title>Fibble - Create New Account</title>
+    <title>SupplyTrack - Create New Account</title>
 
     <!-- Bootstrap -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
