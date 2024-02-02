@@ -137,6 +137,7 @@ $color="navbar-light orange darken-4";
           });
           //console.log(receipt);
         });
+
         $("#prodname").val('');
         
     });
