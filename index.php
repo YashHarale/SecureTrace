@@ -39,7 +39,7 @@
       <div class="loginformcard" id="card1">
             <h4> Welcome to SupplyTrack - The Supply Chain DAPP</h4>
             <p style="max-width: 80%;">
-            SupplyTrack is a Decentralized E2E Logistics Application that stores the whereabouts of product at every freight hub on the Blockchain. At consumer end, customers can simply scan the QR CODE of products and get complete information about the provenance of that product hence empowering consumers to only purchase authentic and quality products.
+            SupplyTrack is a Decentralized supply chain tracking Application that stores the whereabouts of medicines at every freight hub on the Blockchain. At consumer end, customers can simply scan the QR CODE of products and get complete information about the provenance of that product hence empowering consumers to only purchase authentic and quality products.
             </p>
                 <div class="cardbtnarea">
                     <button class="col-md-5 rolebtn" id="login">Login</button>
