@@ -2,7 +2,7 @@
 function openConnection() {
     $host = "localhost";
     $user = "root";
-    $pw = "yash!!@@12"; // Replace 'your_password' with your actual database password
+    $pw = "yash!!@@12"; 
     $db = "supplychain";
 
     // Create connection
