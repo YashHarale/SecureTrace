@@ -63,7 +63,6 @@ contract SupplyChain {
             output=concat(output, allProducts[_productId].positions[j].description);
         }
         return output;
-        
     }
     
 }
