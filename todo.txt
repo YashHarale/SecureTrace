@@ -1,3 +1,4 @@
 Compiler problem
 Understanding entire codebase
 Qr code generation (addproduct)
+Creating a actual problem and thereby solving it 🙂
