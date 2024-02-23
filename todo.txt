@@ -2,4 +2,4 @@ Compiler problem
 Understanding entire codebase
 Qr code generation (addproduct)
 Also determining the metamask problem (deprecation problem)
-Creating a actual problem and thereby solving it 🙂
+Creating a actual problem and thereby solving it 🙂😁
