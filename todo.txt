@@ -1,5 +1,5 @@
 Compiler problem 
 Understanding entire Codebase (very neccesary)
-Qr code generation (addproduct)
+Qr code generation (addproduct) - qrious
 Also determining the metamask problem (deprecation problem)
 Creating a actual problem and thereby solving it 🙂😁
