@@ -46,5 +46,3 @@
 
   </div>
 </nav>
-
-<!-- Developed by Anubhav Dutta : https://www.linkedin.com/in/iamanubhavdutta/ -->
