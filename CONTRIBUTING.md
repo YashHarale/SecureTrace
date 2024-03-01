@@ -1,13 +1,3 @@
-# Contributing
-
-If you have any questions about [QRious](https://github.com/neocotic/qrious) please feel free to
-[raise an issue](https://github.com/neocotic/qrious/issues/new).
-
-Please [search existing issues](https://github.com/neocotic/qrious/issues) for the same feature and/or issue before
-raising a new issue. Commenting on an existing issue is usually preferred over raising duplicate issues.
-
-Please ensure that all files conform to the coding standards, using the same coding style as the rest of the code base.
-This can be done easily via command-line:
 
 ``` bash
 # install/update package dependencies
