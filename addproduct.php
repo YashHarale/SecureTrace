@@ -1,3 +1,5 @@
+//The product is not getting added😶
+
 <?php 
 session_start(); 
 $color="navbar-light orange darken-4";
