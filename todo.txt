@@ -1,4 +1,4 @@
-Compiler problem 
+Compiler problem (Changed the version)
 Understanding entire Codebase (very neccesary)
 Qr code generation (addproduct) - qrious
 Also determining the metamask problem (deprecation problem)
