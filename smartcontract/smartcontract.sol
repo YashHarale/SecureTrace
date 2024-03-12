@@ -18,10 +18,12 @@ contract SupplyChain {
         uint256 productId;
         string date;
         uint256 totalStates;
+
+        //Positions field is the mapping from state indices to State object
         mapping (uint256 => State) positions;
     }
     
-    //Creates mapping named allProducts that maps product IDs (of type uint) to Product obj
+    //Creates mapping(how one info set is related to other) named allProducts that maps product IDs (of type uint) to Product obj
     mapping(uint => Product) allProducts;
 
     // Keeps track of total number products in supply chain
