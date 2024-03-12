@@ -2,15 +2,18 @@ pragma solidity ^0.6.0;
 
 contract SupplyChain {
     
+    // Event is triggered whenever a item is added to the supplychain and includes index of the newly added item
     event Added(uint256 index);
     
+    // State of the product in the supply chain. description - describes the state, person - eth address of the person associated with the state
     struct State{
         string description;
         address person;
     }
     
+    // Structure which determines the product info
     struct Product{
-        address creator;
+        address creator; // Eth address of the creator
         string productName;
         uint256 productId;
         string date;
@@ -18,7 +21,10 @@ contract SupplyChain {
         mapping (uint256 => State) positions;
     }
     
+    //Creates mapping named allProducts that maps product IDs (of type uint) to Product obj
     mapping(uint => Product) allProducts;
+
+    // Keeps track of total number products in supply chain
     uint256 items=0;
     
     function concat(string memory _a, string memory _b) public returns (string memory){
