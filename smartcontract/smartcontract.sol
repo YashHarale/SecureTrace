@@ -23,7 +23,7 @@ contract SupplyChain {
         mapping (uint256 => State) positions;
     }
     
-    //Creates mapping(how one info set is related to other) named allProducts that maps product IDs (of type uint) to Product obj
+    //Creates mapping(how one info set is related to other using key-value pairs) named allProducts that maps product IDs (of type uint) to Product obj..... similar to hash tables
     mapping(uint => Product) allProducts;
 
     // Keeps track of total number products in supply chain
@@ -45,21 +45,18 @@ contract SupplyChain {
     }
     
 
-    //function newItem(string memory _text, string memory _date) public returns (bool) {
-        Product memory newItem = Product({creator: msg.sender, totalStates: 0,productName: _text, productId: items, date: _date});
-        allProducts[items]=newItem;
-        items = items+1;
-        emit Added(items-1);
-        return true;
-    }
+    //This creates a new Product struct named newItem
     function newItem(string memory _text, string memory _date) public returns (bool) {
         Product memory newItem = Product({creator: msg.sender, totalStates: 0,productName: _text, productId: items, date: _date});
+        //items act as the key to uniquely identify the product in mapping
         allProducts[items]=newItem;
         items = items+1;
         emit Added(items-1);
         return true;
     }
     
+
+
     function addState(uint _productId, string memory info) public returns (string memory) {
         require(_productId<=items);
         
