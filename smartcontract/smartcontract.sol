@@ -29,9 +29,13 @@ contract SupplyChain {
     // Keeps track of total number products in supply chain
     uint256 items=0;
     
+    //
     function concat(string memory _a, string memory _b) public returns (string memory){
+
+        //Converts strings into byte arrays (which allows direct access to individual bytes - for binary data processing)
         bytes memory bytes_a = bytes(_a);
         bytes memory bytes_b = bytes(_b);
+
         string memory length_ab = new string(bytes_a.length + bytes_b.length);
         bytes memory bytes_c = bytes(length_ab);
         uint k = 0;
@@ -40,6 +44,14 @@ contract SupplyChain {
         return string(bytes_c);
     }
     
+
+    //function newItem(string memory _text, string memory _date) public returns (bool) {
+        Product memory newItem = Product({creator: msg.sender, totalStates: 0,productName: _text, productId: items, date: _date});
+        allProducts[items]=newItem;
+        items = items+1;
+        emit Added(items-1);
+        return true;
+    }
     function newItem(string memory _text, string memory _date) public returns (bool) {
         Product memory newItem = Product({creator: msg.sender, totalStates: 0,productName: _text, productId: items, date: _date});
         allProducts[items]=newItem;
