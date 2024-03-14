@@ -95,10 +95,8 @@ $color="navbar-light orange darken-4";
         web3 = new Web3(new Web3.providers.HttpProvider('HTTP://127.0.0.1:7545'));
       }
 
-      // Set the Contract
+    // Set the Contract
     var contract = new web3.eth.Contract(contractAbi, contractAddress);
-
-
 
     $("#manufacturer").on("click", function(){
         $("#districard").hide("fast","linear");
