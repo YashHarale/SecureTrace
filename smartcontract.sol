@@ -26,7 +26,7 @@ contract SupplyChain {
     //Creates mapping(how one info set is related to other using key-value pairs) named allProducts that maps product IDs (of type uint) to Product obj..... similar to hash tables
     mapping(uint => Product) allProducts;
 
-    // Keeps track of total number products in supply chain
+    // Keeps track of total number of products in supply chain
     uint256 items=0;
     
     
