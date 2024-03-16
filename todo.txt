@@ -2,9 +2,7 @@ Tasks Done
 Frontend
 Storing user data (login and auth)
 Creating and deploying Smart contract
-Implementing backend using PHP
 
 Remaining Tasks 
-Qr code generator not working
-Implement testing
+Qr code generator not working (Not able to add the product)
 Accessing stored data using Eterscan
