@@ -125,6 +125,17 @@ $color="navbar-light orange darken-4";
         web3.eth.getAccounts().then(async function(accounts) {
           var receipt = await contract.methods.newItem(prodname, thisdate).send({ from: accounts[0], gas: 1000000 })
           .then(receipt => {
+            console.log(receipt);
+
+            if (receipt.events.Added) {
+             var productId = receipt.events.Added.returnValues[0];
+             // Use productId as needed
+              } else {
+             // Handle the case where the event is not present
+              console.error("Added event not emitted");
+                }
+
+            
               var msg="<h5 style='color: #53D769'><b>Item Added Successfully</b></h5><p>Product ID: "+receipt.events.Added.returnValues[0]+"</p>";
               qr.value = receipt.events.Added.returnValues[0];
               $bottom="<p style='color: #FECB2E'> You may print the QR Code if required </p>"
