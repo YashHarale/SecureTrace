@@ -1,8 +1,9 @@
 Tasks Done
 Frontend
 Storing user data (login and auth)
-Creating and deploying Smart contract
+Creating and deploying Smart contract 
 
 Remaining Tasks 
 Qr code generator not working (Not able to add the product)
+Need to debug smart contract 
 Accessing stored data using Eterscan
