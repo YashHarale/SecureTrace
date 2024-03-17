@@ -127,8 +127,8 @@ $color="navbar-light orange darken-4";
           .then(receipt => {
             console.log(receipt);
             console.log("hello habibi");
-              var msg="<h5 style='color: #53D769'><b>Item Added Successfully</b></h5><p>Product ID: "+receipt.events.Added.returnValues[0]+"</p>";
-              qr.value = receipt.events.Added.returnValues[0];
+              var msg="<h5 style='color: #53D769'><b>Item Added Successfully</b></h5><p>Product ID: "+receipt.events.Added+"</p>"; //receipt.events.Added.returnValues[0]
+              qr.value = receipt.events.Added; //receipt.events.Added.returnValues[0]
               $bottom="<p style='color: #FECB2E'> You may print the QR Code if required </p>"
               $("#alertText").html(msg);
               $("#qrious").show();
