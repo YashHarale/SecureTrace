@@ -1,6 +1,7 @@
 pragma solidity ^0.6.0;
 
 contract SupplyChain {
+    
     event Added(uint256 index);
  
     struct State{
