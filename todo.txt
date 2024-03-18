@@ -4,6 +4,5 @@ Storing user data (login and auth)
 Creating and deploying Smart contract 
 
 Remaining Tasks 
-Qr code generator not working (Not able to add the product)
-Need to debug smart contract 
+Qr code generator not working (Problem is not with Qr code generator, problem is up with the Added event in smart contract not getting emitted)
 Accessing stored data using Eterscan
