@@ -155,5 +155,6 @@ var contractAbi = [
 		"stateMutability": "view",
 		"type": "function"
 	}
-]; 
+]; // Paste Contract Here
+
 var contractAddress ='0x73CF39Fb50a0F3E1f4cbAB2ebf6c0C13fdBEBe65'; // Personal
