@@ -47,9 +47,9 @@ contract SupplyChain {
 
     //This creates a new Product struct named newItem
     function newItem(string memory _text, string memory _date) public returns (bool) {
-        Product memory newItem = Product({creator: msg.sender, totalStates: 0,productName: _text, productId: items, date: _date});
+        Product memory newProduct = Product({creator: msg.sender, totalStates: 0,productName: _text, productId: items, date: _date});
         //items act as the key to uniquely identify the product in mapping
-        allProducts[items]=newItem;
+        allProducts[items]=newProduct;
         items = items+1;
         emit Added(items-1);
         return true;
@@ -66,10 +66,10 @@ contract SupplyChain {
         allProducts[_productId].totalStates = allProducts[_productId].totalStates +1;
         return info;
     }
-    
-    function searchProduct(uint _productId) public returns (string memory) {
 
-        //Determines that productid is within the range of valid product IDs
+        function searchProduct(uint _productId) public view returns (string memory) {
+
+        //Determines that wheater productid is within the range of valid product IDs
         require(_productId<=items);
 
         string memory output="Product Name: ";
@@ -82,6 +82,7 @@ contract SupplyChain {
         }
         return output;
     }
+    
     
 }
 
