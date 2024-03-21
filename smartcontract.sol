@@ -3,7 +3,8 @@ pragma solidity ^0.6.0;
 contract SupplyChain {
     
     // Event is triggered whenever a item is added to the supplychain and includes index of the newly added item
-    event Added(uint256 index);
+    // event Added(uint256 index);
+    event Added(uint256 indexed productId);
     
     // State(Information associated with product) of the product in the supply chain. description - describes the state, person - eth address of the person associated with the state
     struct State{
@@ -26,7 +27,7 @@ contract SupplyChain {
     //Creates mapping(how one info set is related to other using key-value pairs) named allProducts that maps product IDs (of type uint) to Product obj..... similar to hash tables
     mapping(uint => Product) allProducts;
 
-    // Keeps track of total number of products in supply chain
+    // Keeps track of total number products in supply chain
     uint256 items=0;
     
     
@@ -64,12 +65,11 @@ contract SupplyChain {
         allProducts[_productId].positions[ allProducts[_productId].totalStates ]=newState;
         
         allProducts[_productId].totalStates = allProducts[_productId].totalStates +1;
-        return info;
     }
+    
+    function searchProduct(uint _productId) public view returns (string memory) {
 
-        function searchProduct(uint _productId) public view returns (string memory) {
-
-        //Determines that wheater productid is within the range of valid product IDs
+        //Determines that productid is within the range of valid product IDs
         require(_productId<=items);
 
         string memory output="Product Name: ";
@@ -83,7 +83,6 @@ contract SupplyChain {
         return output;
     }
     
-    
 }
 
 // pragma solidity ^0.6.0;
@@ -91,8 +90,7 @@ contract SupplyChain {
 // contract SupplyChain {
     
 //     // Event is triggered whenever a item is added to the supplychain and includes index of the newly added item
-//     // event Added(uint256 index);
-//     event Added(uint256 indexed productId);
+//     event Added(uint256 index);
     
 //     // State(Information associated with product) of the product in the supply chain. description - describes the state, person - eth address of the person associated with the state
 //     struct State{
@@ -115,7 +113,7 @@ contract SupplyChain {
 //     //Creates mapping(how one info set is related to other using key-value pairs) named allProducts that maps product IDs (of type uint) to Product obj..... similar to hash tables
 //     mapping(uint => Product) allProducts;
 
-//     // Keeps track of total number products in supply chain
+//     // Keeps track of total number of products in supply chain
 //     uint256 items=0;
     
     
@@ -153,11 +151,12 @@ contract SupplyChain {
 //         allProducts[_productId].positions[ allProducts[_productId].totalStates ]=newState;
         
 //         allProducts[_productId].totalStates = allProducts[_productId].totalStates +1;
+//         return info;
 //     }
-    
-//     function searchProduct(uint _productId) public view returns (string memory) {
 
-//         //Determines that productid is within the range of valid product IDs
+//         function searchProduct(uint _productId) public view returns (string memory) {
+
+//         //Determines that wheater productid is within the range of valid product IDs
 //         require(_productId<=items);
 
 //         string memory output="Product Name: ";
@@ -170,5 +169,6 @@ contract SupplyChain {
 //         }
 //         return output;
 //     }
+    
     
 // }
