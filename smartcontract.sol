@@ -65,6 +65,12 @@ contract SupplyChain {
         allProducts[_productId].positions[ allProducts[_productId].totalStates ]=newState;
         
         allProducts[_productId].totalStates = allProducts[_productId].totalStates +1;
+
+        // Emitting the Added event
+        emit Added(_productId);
+
+         return "State added successfully";
+
     }
     
     function searchProduct(uint _productId) public view returns (string memory) {
