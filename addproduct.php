@@ -123,7 +123,7 @@ $color="navbar-light orange darken-4";
         var thisdate = today.getFullYear()+'-'+(today.getMonth()+1)+'-'+today.getDate();
 
         web3.eth.getAccounts().then(async function(accounts) {
-          var receipt = await contract.methods.newItem(prodname, thisdate).send({ from: accounts[0], gas: 1000000 })
+          var receipt = await contract.methods.newProduct(prodname, thisdate).send({ from: accounts[0], gas: 1000000 })
           .then(receipt => {
             console.log(receipt);
             console.log("hello habibi");
