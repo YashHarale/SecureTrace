@@ -27,7 +27,7 @@ contract SupplyChain {
     uint256 items=0;
     
     
-    function concat(string memory _a, string memory _b) public returns (string memory){
+    function concat(string memory _a, string memory _b) public pure returns (string memory){
 
         bytes memory bytes_a = bytes(_a);
         bytes memory bytes_b = bytes(_b);
@@ -78,3 +78,4 @@ contract SupplyChain {
     }
     
 }
+
