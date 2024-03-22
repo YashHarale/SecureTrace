@@ -107,7 +107,8 @@ var contractAbi = [
 	]
 ]; // Paste Contract Here
 
-var contractAddress ='0x0A042cff8e74B5d2F75aa32f3e52e69F0AfC8e77'; 
+var contractAddress ='0x0A042cff8e74B5d2F75aa32f3e52e69F0AfC8e77'; // This is not a contract address rather it is our account address 🤣
+//Usually contract address starts with "0x" that is why this problem, as for our prev contract address i.e  '0x73CF39Fb50a0F3E1f4cbAB2ebf6c0C13fdBEBe65' the account address was '0xE something'
 
 // Prev contract address
 // '0x73CF39Fb50a0F3E1f4cbAB2ebf6c0C13fdBEBe65'
