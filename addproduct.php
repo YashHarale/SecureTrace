@@ -95,8 +95,12 @@ $color="navbar-light orange darken-4";
         web3 = new Web3(new Web3.providers.HttpProvider('HTTP://127.0.0.1:7545'));
       }
 
+      console.log(window.ethereum);
+
     // Set the Contract
     var contract = new web3.eth.Contract(contractAbi, contractAddress);
+    console.log(contract);
+
 
     $("#manufacturer").on("click", function(){
         $("#districard").hide("fast","linear");
@@ -112,6 +116,8 @@ $color="navbar-light orange darken-4";
         $(".customalert").hide("fast","linear");
     });
 
+console.log(window.web3.eth);
+
 
     $('#form1').on('submit', function(event) {
         event.preventDefault(); // to prevent page reload when form is submitted
@@ -123,12 +129,11 @@ $color="navbar-light orange darken-4";
         var thisdate = today.getFullYear()+'-'+(today.getMonth()+1)+'-'+today.getDate();
 
         web3.eth.getAccounts().then(async function(accounts) {
-          var receipt = await contract.methods.newProduct(prodname, thisdate).send({ from: accounts[0], gas: 1000000 })
+          var receipt = await contract.methods.newItem(prodname, thisdate).send({ from: accounts[0], gas: 1000000 })
           .then(receipt => {
             console.log(receipt);
-            console.log("hello habibi");
-              var msg="<h5 style='color: #53D769'><b>Item Added Successfully</b></h5><p>Product ID: "+receipt.events.Added+"</p>"; //receipt.events.Added.returnValues[0]
-              qr.value = receipt.events.Added; //receipt.events.Added.returnValues[0]
+              var msg="<h5 style='color: #53D769'><b>Item Added Successfully</b></h5><p>Product ID: "+receipt.events.Added.returnValues[0]+"</p>"; //receipt.events.Added.returnValues[0]
+              qr.value = receipt.events.Added.returnValues[0]; //receipt.events.Added.returnValues[0]
               $bottom="<p style='color: #FECB2E'> You may print the QR Code if required </p>"
               $("#alertText").html(msg);
               $("#qrious").show();
@@ -214,3 +219,5 @@ $color="navbar-light orange darken-4";
     </script>
   </body>
 </html>
+
+
