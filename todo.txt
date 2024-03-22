@@ -6,3 +6,7 @@ Creating and deploying Smart contract
 Remaining Tasks 
 Qr code generator not working (Problem is not with Qr code generator, problem is up with the Added event in smart contract not getting emitted)
 Accessing stored data using Eterscan
+
+
+NOTE
+We have used the remix IDE from chrome (for the current metamask account from which we are deploying the smart contract)
