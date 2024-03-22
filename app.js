@@ -1,5 +1,4 @@
 var contractAbi = [
-	[
 		{
 			"anonymous": false,
 			"inputs": [
@@ -104,7 +103,6 @@ var contractAbi = [
 			"stateMutability": "view",
 			"type": "function"
 		}
-	]
 ]; // Paste Contract Here
 
 var contractAddress ='0x16763665f88590Bbad2B66C56E19Cf8571591F70'; // This is not a contract address rather it is our account address 🤣
