@@ -40,30 +40,6 @@ var contractAbi = [
 		"inputs": [
 			{
 				"internalType": "string",
-				"name": "_text",
-				"type": "string"
-			},
-			{
-				"internalType": "string",
-				"name": "_date",
-				"type": "string"
-			}
-		],
-		"name": "newItem",
-		"outputs": [
-			{
-				"internalType": "bool",
-				"name": "",
-				"type": "bool"
-			}
-		],
-		"stateMutability": "nonpayable",
-		"type": "function"
-	},
-	{
-		"inputs": [
-			{
-				"internalType": "string",
 				"name": "_a",
 				"type": "string"
 			},
@@ -87,6 +63,30 @@ var contractAbi = [
 	{
 		"inputs": [
 			{
+				"internalType": "string",
+				"name": "_text",
+				"type": "string"
+			},
+			{
+				"internalType": "string",
+				"name": "_date",
+				"type": "string"
+			}
+		],
+		"name": "newItem",
+		"outputs": [
+			{
+				"internalType": "bool",
+				"name": "",
+				"type": "bool"
+			}
+		],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
 				"internalType": "uint256",
 				"name": "_productId",
 				"type": "uint256"
@@ -103,11 +103,12 @@ var contractAbi = [
 		"stateMutability": "view",
 		"type": "function"
 	}
-];
+]
  // Paste Contract Here
 
+ var contractAddress = '0xe8E3A02727FA7636Cb1E972cEC58a4a807708450';
 // var contractAddress ='0x16763665f88590Bbad2B66C56E19Cf8571591F70'; 
-var contractAddress = '0xe8E3A02727FA7636Cb1E972cEC58a4a807708450';
+
 
 // This is not a contract address rather it is our account address 🤣
 //Usually contract address starts with "0x" that is why this problem, as for our prev contract address i.e  '0x73CF39Fb50a0F3E1f4cbAB2ebf6c0C13fdBEBe65' the account address was '0xE something'
