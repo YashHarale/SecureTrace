@@ -105,8 +105,8 @@ var contractAbi =
 			"type": "function"
 		}
 	]
+	
  // Paste Contract Here
-
  var contractAddress = '0xBDc1Ca61FfeF48A39fE84EcbceE7a252Cf194e83';
 
 
