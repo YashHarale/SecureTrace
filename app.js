@@ -103,11 +103,10 @@ var contractAbi = [
 		"stateMutability": "view",
 		"type": "function"
 	}
-]
+];
  // Paste Contract Here
 
- var contractAddress = '0xe8E3A02727FA7636Cb1E972cEC58a4a807708450';
-// var contractAddress ='0x16763665f88590Bbad2B66C56E19Cf8571591F70'; 
+ var contractAddress = '0xBDc1Ca61FfeF48A39fE84EcbceE7a252Cf194e83';
 
 
 // This is not a contract address rather it is our account address 🤣
