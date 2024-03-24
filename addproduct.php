@@ -95,11 +95,27 @@ $color="navbar-light orange darken-4";
         web3 = new Web3(new Web3.providers.HttpProvider('HTTP://127.0.0.1:7545'));
       }
 
-      console.log(window.ethereum);
+      //Getting the block number
+      web3.eth.getBlockNumber(function(error, blockNumber) {
+      if (!error) {
+      console.log('Latest block number:', blockNumber);
+      } 
+      else {
+      console.error('Error:', error);
+      }
+      });
+
+
+      console.log(web3.currentProvider);
+      console.log(web3);
+
+      console.log('Web3 version:', web3.version);
+
+      // console.log(window.ethereum);
 
     // Set the Contract
     var contract = new web3.eth.Contract(contractAbi, contractAddress);
-    console.log(contract);
+    console.log(contractAddress);
 
 
     $("#manufacturer").on("click", function(){
@@ -116,7 +132,7 @@ $color="navbar-light orange darken-4";
         $(".customalert").hide("fast","linear");
     });
 
-console.log(window.web3.eth);
+
 
 
     $('#form1').on('submit', function(event) {
