@@ -107,4 +107,3 @@ var contractAbi =
 ]
  // Paste Contract Here
  var contractAddress = '0x2ffc8Dd40f771e74EbF0B2944c7868EEE40b4425';
- console.log(contractAddress);
