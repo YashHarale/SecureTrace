@@ -43,9 +43,9 @@ contract SupplyChain {
 
     //This creates a new Product struct named newItem
     function newItem(string memory _text, string memory _date) public returns (bool) {
-        Product memory newItem = Product({creator: msg.sender, totalStates: 0,productName: _text, productId: items, date: _date});
+        Product memory newProduct = Product({creator: msg.sender, totalStates: 0,productName: _text, productId: items, date: _date});
         //items act as the key to uniquely identify the product in mapping
-        allProducts[items]=newItem;
+        allProducts[items]=newProduct;
         items = items+1;
         emit Added(items-1);
         return true;
