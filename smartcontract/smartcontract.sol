@@ -63,7 +63,7 @@ contract SupplyChain {
         return info;
     }
     
-    function searchProduct(uint _productId) public returns (string memory) {
+    function searchProduct(uint _productId) public view returns (string memory) {
 
         require(_productId<=items);
         string memory output="Product Name: ";
