@@ -1,4 +1,4 @@
-Frontend  ✔ 
+Frontend  ✔  task
 Storing user data (login and auth) ✔
 Creating and deploying Smart contract ✔
 Qr code generator not working (Problem is not with Qr code generator, problem is up with the Added event in smart contract not getting emitted) ✔
