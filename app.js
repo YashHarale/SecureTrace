@@ -105,5 +105,4 @@ var contractAbi =
 		"type": "function"
 	}
 ]
- 
- var contractAddress = '0x376daA38ebE6EAA05defd9Ab608799C82b9a3BC4';
+ var contractAddress = '0xd9145CCE52D386f254917e481eB44e9943F39138';
