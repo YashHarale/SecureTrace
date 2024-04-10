@@ -194,7 +194,7 @@ $color="navbar-dark cyan darken-3";
 			node.value = "";
 			qrcode.callback = function(res) {
 			if(res instanceof Error) {
-				alert("No QR code found. Please make sure the QR code is within the camera's frame and try again.");
+				alert("Please make sure the QR code is within the camera's frame and try again.");
 			} else {
 				node.parentNode.previousElementSibling.value = res;
 				document.getElementById('searchButton').click();
