@@ -13,5 +13,3 @@ Feel free to make use of the `demo.html` to test your changes locally before com
 
 All pull requests should be made to the `develop` branch.
 
-Don't forget to add your details to the list of [AUTHORS.md](https://github.com/neocotic/qrious/blob/master/AUTHORS.md)
-if you want your contribution to be recognized by others.
