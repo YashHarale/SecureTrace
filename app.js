@@ -41,30 +41,6 @@ var contractAbi =
 		"inputs": [
 			{
 				"internalType": "string",
-				"name": "_text",
-				"type": "string"
-			},
-			{
-				"internalType": "string",
-				"name": "_date",
-				"type": "string"
-			}
-		],
-		"name": "newItem",
-		"outputs": [
-			{
-				"internalType": "bool",
-				"name": "",
-				"type": "bool"
-			}
-		],
-		"stateMutability": "nonpayable",
-		"type": "function"
-	},
-	{
-		"inputs": [
-			{
-				"internalType": "string",
 				"name": "_a",
 				"type": "string"
 			},
@@ -88,6 +64,30 @@ var contractAbi =
 	{
 		"inputs": [
 			{
+				"internalType": "string",
+				"name": "_text",
+				"type": "string"
+			},
+			{
+				"internalType": "string",
+				"name": "_date",
+				"type": "string"
+			}
+		],
+		"name": "newItem",
+		"outputs": [
+			{
+				"internalType": "bool",
+				"name": "",
+				"type": "bool"
+			}
+		],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
 				"internalType": "uint256",
 				"name": "_productId",
 				"type": "uint256"
@@ -105,4 +105,4 @@ var contractAbi =
 		"type": "function"
 	}
 ]
- var contractAddress = '0x3066458e89dE7fca0BD0825aa4AB895C2e4CD816';
+ var contractAddress = '0x64a643ED2716B859Bed6FC562D8fA4aceF337e47';
