@@ -107,8 +107,6 @@ $color="navbar-dark cyan darken-3";
       // Set the Contract
     var contract = new web3.eth.Contract(contractAbi, contractAddress);
 
-
-
     $("#manufacturer").on("click", function(){
         $("#districard").hide("fast","linear");
         $("#manufacturercard").show("fast","linear");
