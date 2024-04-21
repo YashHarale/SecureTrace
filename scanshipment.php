@@ -146,6 +146,8 @@ $color="navbar-dark cyan darken-3";
         
     });
 
+
+    // Use api's to convert lat and lon to actual location
     // Code for detecting location
     if (navigator.geolocation) {
         navigator.geolocation.getCurrentPosition(showPosition);
