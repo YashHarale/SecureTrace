@@ -154,7 +154,6 @@ $color="navbar-dark cyan darken-3";
     }
     function showPosition(position) {
         var autoLocation = position.coords.latitude +", " + position.coords.longitude;
-        console.log(autolocation);
         $("#prodlocation").val(autoLocation);
     }
 
