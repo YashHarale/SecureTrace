@@ -149,6 +149,37 @@ $color="navbar-dark cyan darken-3";
 
     // Use api's to convert lat and lon to actual location
     // Code for detecting location
+
+//     function reverseGeocode(latitude, longitude) {
+//     var apiKey = 'YOUR_GOOGLE_MAPS_API_KEY';
+//     var apiUrl = 'https://maps.googleapis.com/maps/api/geocode/json?latlng=' + latitude + ',' + longitude + '&key=' + apiKey;
+
+//     $.ajax({
+//         url: apiUrl,
+//         type: 'GET',
+//         success: function(response) {
+//             if (response.status === 'OK') {
+//                 var locationName = response.results[0].formatted_address;
+//                 $("#prodlocation").val(locationName);
+//             } else {
+//                 console.error('Reverse geocoding failed: ' + response.error_message);
+//             }
+//         },
+//         error: function(xhr, status, error) {
+//             console.error('Reverse geocoding failed: ' + error);
+//         }
+//     });
+// }
+
+// if (navigator.geolocation) {
+//     navigator.geolocation.getCurrentPosition(function(position) {
+//         var latitude = position.coords.latitude;
+//         var longitude = position.coords.longitude;
+//         reverseGeocode(latitude, longitude);
+//     });
+// }
+
+
     if (navigator.geolocation) {
         navigator.geolocation.getCurrentPosition(showPosition);
     }
