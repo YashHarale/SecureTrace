@@ -150,34 +150,36 @@ $color="navbar-dark cyan darken-3";
     // Use api's to convert lat and lon to actual location
     // Code for detecting location
 
-//     function reverseGeocode(latitude, longitude) {
-//     var apiKey = 'YOUR_GOOGLE_MAPS_API_KEY';
-//     var apiUrl = 'https://maps.googleapis.com/maps/api/geocode/json?latlng=' + latitude + ',' + longitude + '&key=' + apiKey;
+//     async function reverseGeocode(latitude, longitude, apiKey) {
+//     const url = `https://api.opencagedata.com/geocode/v1/json?q=${latitude}+${longitude}&key=${apiKey}`;
 
-//     $.ajax({
-//         url: apiUrl,
-//         type: 'GET',
-//         success: function(response) {
-//             if (response.status === 'OK') {
-//                 var locationName = response.results[0].formatted_address;
-//                 $("#prodlocation").val(locationName);
-//             } else {
-//                 console.error('Reverse geocoding failed: ' + response.error_message);
-//             }
-//         },
-//         error: function(xhr, status, error) {
-//             console.error('Reverse geocoding failed: ' + error);
+//     try {
+//         const response = await fetch(url);
+//         if (!response.ok) {
+//             throw new Error(`Error: ${response.status}`);
 //         }
-//     });
+
+//         const data = await response.json();
+//         if (data.results && data.results.length > 0) {
+//             const location = data.results[0].formatted;
+//             return location;
+//         } else {
+//             return "No results found";
+//         }
+//     } catch (error) {
+//         console.error(error);
+//         return `Error: ${error.message}`;
+//     }
 // }
 
-// if (navigator.geolocation) {
-//     navigator.geolocation.getCurrentPosition(function(position) {
-//         var latitude = position.coords.latitude;
-//         var longitude = position.coords.longitude;
-//         reverseGeocode(latitude, longitude);
-//     });
-// }
+// document.addEventListener('DOMContentLoaded', async () => {
+//     const apiKey = "YOUR-API-KEY";  // Replace with your OpenCage API key
+//     const latitude = 40.730610;  // Replace with the latitude
+//     const longitude = -73.935242;  // Replace with the longitude
+
+//     const location = await reverseGeocode(latitude, longitude, apiKey);
+//     document.getElementById('location').textContent = `Location: ${location}`;
+// });
 
 
     if (navigator.geolocation) {
