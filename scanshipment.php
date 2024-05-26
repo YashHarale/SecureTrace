@@ -182,13 +182,50 @@ $color="navbar-dark cyan darken-3";
 // });
 
 
+    // if (navigator.geolocation) {
+    //     navigator.geolocation.getCurrentPosition(showPosition);
+    // }
+    // function showPosition(position) {
+    //     var autoLocation = position.coords.latitude +", " + position.coords.longitude;
+    //     $("#prodlocation").val(autoLocation);
+    // }
+
+
     if (navigator.geolocation) {
-        navigator.geolocation.getCurrentPosition(showPosition);
+    navigator.geolocation.getCurrentPosition(showPosition);
     }
-    function showPosition(position) {
-        var autoLocation = position.coords.latitude +", " + position.coords.longitude;
-        $("#prodlocation").val(autoLocation);
+
+async function showPosition(position) {
+    const latitude = position.coords.latitude;
+    const longitude = position.coords.longitude;
+    const autoLocation = `${latitude}, ${longitude}`;
+    document.getElementById("prodlocation").value = autoLocation;
+
+    const location = await reverseGeocode(latitude, longitude);
+    document.getElementById("location").textContent = `Location: ${location}`;
+}
+
+async function reverseGeocode(latitude, longitude) {
+    const url = `https://nominatim.openstreetmap.org/reverse?format=json&lat=${latitude}&lon=${longitude}`;
+
+    try {
+        const response = await fetch(url);
+        if (!response.ok) {
+            throw new Error(`Error: ${response.status}`);
+        }
+
+        const data = await response.json();
+        if (data && data.display_name) {
+            return data.display_name;
+        } else {
+            return "No results found";
+        }
+    } catch (error) {
+        console.error(error);
+        return `Error: ${error.message}`;
     }
+}
+
 
     $('#form2').on('submit', function(event) {
         event.preventDefault(); // to prevent page reload when form is submitted
