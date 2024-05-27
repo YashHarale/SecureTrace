@@ -193,7 +193,7 @@ $color="navbar-dark cyan darken-3";
 
     if (navigator.geolocation) {
     navigator.geolocation.getCurrentPosition(showPosition);
-    }
+   }
 
 async function showPosition(position) {
     const latitude = position.coords.latitude;
@@ -202,7 +202,13 @@ async function showPosition(position) {
     document.getElementById("prodlocation").value = autoLocation;
 
     const location = await reverseGeocode(latitude, longitude);
-    document.getElementById("location").textContent = `Location: ${location}`;
+    const prodLocationInput = document.getElementById("prodlocation");
+    prodLocationInput.value = location; // Set the value of the input field to the human-readable address
+
+    console.log(document.getElementById("prodlocation"));
+
+    document.getElementById("prodlocation").textContent = `Location: ${location}`;
+
 }
 
 async function reverseGeocode(latitude, longitude) {
