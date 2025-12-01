@@ -20,6 +20,12 @@ contract SupplyChain {
         //creates mapping of states
         mapping (uint256 => State) positions;
     }
+
+    struct Dealer {
+        uint256 sellingPrice;
+        uint256 mrp;
+        string orderDate;
+     }
     
 
     mapping(uint => Product) allProducts;
