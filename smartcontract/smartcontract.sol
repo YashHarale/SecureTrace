@@ -8,12 +8,6 @@ contract SupplyChain {
         string description;
         address person;
     }
-
-    struct Order {
-        uint256 OrderID;
-        string date;
-    }
-    
  
     struct Product{
         address creator; // Eth address of the creator
